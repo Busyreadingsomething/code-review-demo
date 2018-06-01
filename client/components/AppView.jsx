@@ -1,28 +1,18 @@
 import React from 'react';
 import axios from 'axios';
-function PuppyList(props) {
+
+const Puppy = props => (
+  <div className="puppy">
+    <h3 className="breed">{props.pup.toString().split('/')[4].toUpperCase()}</h3>
+    <a href="https://www.youtube.com/watch?v=MujRLvZ61jE"><img src={props.pup} /></a>
+  </div>
+)
+const PuppyList = (props)=> {
   return(
     <div className="puppy-container">
-      <div className="puppy">
-      <h3 className="breed">{props.list[0].toString().split('/')[4].toUpperCase()}</h3>
-      <a href="https://www.youtube.com/watch?v=MujRLvZ61jE"><img src={props.list[0]} /></a>
-      </div>
-      <div className="puppy">
-      <h3 className="breed">{props.list[1].toString().split('/')[4].toUpperCase()}</h3>
-      <a href="https://www.youtube.com/watch?v=MujRLvZ61jE"><img src={props.list[1]} /></a>
-      </div>
-      <div className="puppy">
-      <h3 className="breed">{props.list[2].toString().split('/')[4].toUpperCase()}</h3>
-      <a href="https://www.youtube.com/watch?v=MujRLvZ61jE"><img src={props.list[2]} /></a>
-      </div>
-      <div className="puppy">
-      <h3 className="breed">{props.list[3].toString().split('/')[4].toUpperCase()}</h3>
-      <a href="https://www.youtube.com/watch?v=MujRLvZ61jE"><img src={props.list[3]} /></a>
-      </div>
-      <div className="puppy">
-      <h3 className="breed">{props.list[4].toString().split('/')[4].toUpperCase()}</h3>
-      <a href="https://www.youtube.com/watch?v=MujRLvZ61jE"><img src={props.list[4]} /></a>
-      </div>
+      {
+        props.list.map(pup => <Puppy pup={pup}/>)
+      }
     </div>
   )
 }
