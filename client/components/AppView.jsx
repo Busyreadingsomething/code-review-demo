@@ -8,23 +8,27 @@ const Puppy = props => (
       <img src={props.pup} alt="pup" />
     </a>
   </div>
-);
 
-const PuppyList = props => (
-  <div className="puppy-container">
-    {
-      props.list.map(pup => <Puppy pup={pup} />)
-    }
-  </div>
-);
-
-const SearchView = props => (
-  <div className="search-container">
-    <h3>SPELLING COUNTS!</h3>
-    <input type="text" id="search-puppy" onChange={props.search} />
-    <input type="button" value="SEARCH" id="button" onClick={props.get} />
-  </div>
-);
+)
+const PuppyList = (props)=> {
+  return(
+    <div className="puppy-container">
+    <div>BAD DIV</div>
+      {
+        props.list.map(pup => <Puppy pup={pup}/>)
+      }
+    </div>
+  )
+}
+function SearchView(props) {
+  return(
+    <div className="search-container">
+      <h3>SPELLING COUNTS!</h3>
+      <input type="text" id="search-puppy" onChange={props.search}/>
+      <input type="button" value="SEARCH" id="button" onClick={props.get}/> 
+    </div>
+  );
+}
 
 class App extends React.Component {
   constructor(props) {
