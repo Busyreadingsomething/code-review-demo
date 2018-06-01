@@ -1,9 +1,25 @@
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Montserrat:900');
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFFFF; 
+}
 div {
   display: flex;
 }
 
 h1 {
   color: blue;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px #000;
+  border: 3px solid rgb(54, 54, 54);
+  border-radius: 100px;
+  padding: 10px;
+  background-color: #ffecec;
+  box-shadow: 1px 1px 1px rgb(97, 97, 97);
 }
 
 .puppy {
@@ -17,6 +33,7 @@ h1 {
   height: 25px;
   width: 150px;
   margin: 0 10px;
+  box-shadow: 0.5px 0.5px 0.5px rgb(97, 97, 97);
 }
 
 #button {
@@ -40,6 +57,7 @@ h1 {
 img {
   height: 200px;
   width: 200px;
+  border: 5px solid rgba(14, 16, 24, 0.801);
   border-radius: 100px;
   transition: all .2s ease-in-out;
 }
