@@ -1,0 +1,80 @@
+div {
+  display: flex;
+}
+
+h1 {
+  color: blue;
+}
+
+.puppy {
+  flex-flow: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+#search-puppy {
+  height: 25px;
+  width: 150px;
+  margin: 0 10px;
+}
+
+#button {
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #0c5ec9;
+  border-radius: 100px;
+  background-color: #2282ff;
+  font: black;
+  font-weight: bolder;
+  padding: 1px;
+  width: 100px;
+  height: 25px;
+}
+
+#pups {
+  align-content: center;
+  justify-content: center;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  transition: all .2s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.breed {
+  width: 50px;
+  height: 25px;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.breed:hover {
+  width: 100px;
+  height: 50px;
+  transform: rotate(3600deg);
+}
+
+.app-container {
+  justify-content: center;
+  align-content: center;
+}
+
+.puppy-container, .app-container {
+  flex-flow: column;
+}
+
+.puppy-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container{
+  flex-flow: row;
+  align-items: center;
+}
